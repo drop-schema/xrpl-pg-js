@@ -1,0 +1,24 @@
+networks:
+  app-tier:
+    driver: bridge
+
+services:
+  node:
+    build:
+      context: .
+      dockerfile: ./js.Dockerfile
+      target: node-pg-ws
+    networks:
+      - app-tier
+  postgresql:
+    image: 'bitnami/postgresql:latest'
+    environment:
+      - POSTGRESQL_PASSWORD=xrpsql
+      - POSTGRESQL_USERNAME=xrpsql
+      - POSTGRESQL_DATABASE=xrpsql
+    volumes:
+      - ./postgresql:/bitnami/postgresql
+    ports:
+      - "5432:5432"
+    networks:
+      - app-tier
