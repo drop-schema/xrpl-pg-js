@@ -1,0 +1,108 @@
+{
+    "engine_result": "tesSUCCESS",
+    "engine_result_code": 0,
+    "engine_result_message": "The transaction was applied. Only final in a validated ledger.",
+    "ledger_hash": "36724C4407E042F5076F6C6B3CD362F185E1DFF3C644A15308B1F4BD9CF9BE9D",
+    "ledger_index": 78681991,
+    "meta": {
+      "AffectedNodes": [
+        {
+          "CreatedNode": {
+            "LedgerEntryType": "DirectoryNode",
+            "LedgerIndex": "00B72D4B7F630043F7FDDCC58FD873818FD890CD123C2C885005356402D41B10",
+            "NewFields": {
+              "ExchangeRate": "5005356402d41b10",
+              "RootIndex": "00B72D4B7F630043F7FDDCC58FD873818FD890CD123C2C885005356402D41B10",
+              "TakerPaysCurrency": "0000000000000000000000005250520000000000",
+              "TakerPaysIssuer": "55F59DCE629497D6FB3F5F1235BE6525244018C1"
+            }
+          }
+        },
+        {
+          "ModifiedNode": {
+            "FinalFields": {
+              "Flags": 0,
+              "IndexNext": "0",
+              "Owner": "rKvFxVsmNiL6y6hf99bxvyCGSFiMc1XDBA",
+              "RootIndex": "B759023D4B543757D6B2FEE15F9787FECBF99812502CCC955D96448BBEFB4DDF"
+            },
+            "LedgerEntryType": "DirectoryNode",
+            "LedgerIndex": "051C4B44038137DEBC0862DCE9CA5A454062926EA7A449082FC9C1B97FD8EEBE"
+          }
+        },
+        {
+          "CreatedNode": {
+            "LedgerEntryType": "Offer",
+            "LedgerIndex": "0D9F8E9CA469AAB18C6D90689F41D97AAA372E51C9E6FEF4DF351CF18368667B",
+            "NewFields": {
+              "Account": "rKvFxVsmNiL6y6hf99bxvyCGSFiMc1XDBA",
+              "BookDirectory": "00B72D4B7F630043F7FDDCC58FD873818FD890CD123C2C885005356402D41B10",
+              "OwnerNode": "1",
+              "Sequence": 68922909,
+              "TakerGets": "20000000",
+              "TakerPays": {
+                "currency": "RPR",
+                "issuer": "r3qWgpz2ry3BhcRJ8JE6rxM8esrfhuKp4R",
+                "value": "293.215708802"
+              }
+            }
+          }
+        },
+        {
+          "ModifiedNode": {
+            "FinalFields": {
+              "Account": "rKvFxVsmNiL6y6hf99bxvyCGSFiMc1XDBA",
+              "Balance": "481255053",
+              "BurnedNFTokens": 7,
+              "Domain": "68747470733A2F2F776F726C646D6F6E65792E696F2F",
+              "Flags": 8388608,
+              "MintedNFTokens": 7,
+              "OwnerCount": 12,
+              "Sequence": 68922910,
+              "TickSize": 6
+            },
+            "LedgerEntryType": "AccountRoot",
+            "LedgerIndex": "CD4BDC0E7AC30AFE0730B40FC4F7BD3B20E8489FA2D977AB7C5817E744E53162",
+            "PreviousFields": {
+              "Balance": "481255068",
+              "OwnerCount": 11,
+              "Sequence": 68922909
+            },
+            "PreviousTxnID": "A36FCACF6F20A97B76E49F98D49C06F7BE6FEB57C9414FA02258C761D74BE2D5",
+            "PreviousTxnLgrSeq": 78681988
+          }
+        }
+      ],
+      "TransactionIndex": 14,
+      "TransactionResult": "tesSUCCESS"
+    },
+    "status": "closed",
+    "transaction": {
+      "Account": "rKvFxVsmNiL6y6hf99bxvyCGSFiMc1XDBA",
+      "Fee": "15",
+      "Flags": 0,
+      "LastLedgerSequence": 78682009,
+      "Memos": [
+        {
+          "Memo": {
+            "MemoData": "7B226D6F64756C65223A2258574D2041737369737465642054726164696E67222C22616363657373223A2258574D204E4654204469616D6F6E64222C2276657273696F6E223A2276302E322E372062657461222C227374726174656779223A224261736963227D"
+          }
+        }
+      ],
+      "Sequence": 68922909,
+      "SigningPubKey": "02FC183BE3B8C301DB2ED87143A5362BBBEA02EB6F76CD50D3AE2888FE0E0EB804",
+      "TakerGets": "20000000",
+      "TakerPays": {
+        "currency": "RPR",
+        "issuer": "r3qWgpz2ry3BhcRJ8JE6rxM8esrfhuKp4R",
+        "value": "293.215708802"
+      },
+      "TransactionType": "OfferCreate",
+      "TxnSignature": "3044022028A56CEDA8BB99F66E92211790AE8B1F25C402D0F1BE77E7D210633DCCFE6EC1022012F53432A9AC1BC5EC3F465426C38E2E43CAA57C0690A38685C953C124628E7B",
+      "date": 733176981,
+      "hash": "07ABA3F2024E02E9EFEB448502226B44FB455A26F1C065EF270437F0DC054B4C",
+      "owner_funds": "447255053"
+    },
+    "type": "transaction",
+    "validated": true
+  }

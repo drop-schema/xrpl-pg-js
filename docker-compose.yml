@@ -19,6 +19,38 @@ services:
     volumes:
       - ./postgresql:/bitnami/postgresql
     ports:
-      - "5432:5432"
+      - "5433:5432"
     networks:
       - app-tier
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - 9090:9090
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - app-tier
+  grafana:
+    image: grafana/grafana-oss
+    ports:
+      - 3000:3000
+    # user:
+    #   -
+    volumes:
+      - ./grafana-data:/var/lib/grafana
+    networks:
+      - app-tier
+  timescaledb:
+    image: timescale/timescaledb:latest-pg14
+    restart: always
+    ports:
+      - 4321:5432
+    environment:
+      POSTGRES_USER: xrpsql
+      POSTGRES_PASSWORD: xrpsql
+    volumes:
+      - /data/timescaledb:/var/lib/postgresql/data
+    networks:
+      - app-tier
+# volumes:
+#   grafana-data
